@@ -49,18 +49,7 @@ main {
     justify-content: center;
 }
 
-/* Footer */
-footer {
-    position: fixed;
-    bottom: 0;
-    height: 40px;
-    width: 100%;
-    left: 0;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
 
-}
 
 * {
     box-sizing: border-box
@@ -71,25 +60,6 @@ footer {
     justify-content: center;
 }
 
-/* .left-column {
-    width: 30%;
-}
-
-
-.left-column h1 {
-    margin: 20px;
-    font-size: 48px;
-    font-weight: 700;
-    margin-bottom: 20px;
-
-}
-
-.left-column p {
-    margin: 20px;
-    font-size: 24px;
-    font-weight: 400;
-    margin-bottom: 20px;
-} */
 
 /* Style for the right column */
 .right-column {

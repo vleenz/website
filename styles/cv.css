@@ -1,0 +1,60 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #333;
+    background-color: rgb(228, 227, 227)5a5;
+
+}
+
+header {
+    display: flex;
+    color: #fff;
+    padding: 10px;
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+nav {
+    width: 100%;
+    margin-left: 30%;
+    margin-right: 30%;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+}
+
+ul li {
+
+    padding: 10px;
+    margin: 10px;
+}
+
+a {
+    text-decoration: none;
+    font-size: 24px;
+    color: #333;
+}
+
+.cv a {
+    text-decoration: underline;
+}
+
+
+.img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* Add this line to vertically center the image */
+    margin-top: 20px;
+    /* Adjust margin as needed */
+}
+
+.img {
+    object-fit: contain;
+}
