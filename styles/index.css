@@ -70,6 +70,22 @@ footer {
     width: 30%;
 }
 
+
+.left-column h1 {
+    margin: 20px;
+    font-size: 48px;
+    font-weight: 700;
+    margin-bottom: 20px;
+
+}
+
+.left-column p {
+    margin: 20px;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 20px;
+}
+
 /* Style for the right column */
 .right-column {
     /* Set a maximum width for the column */
