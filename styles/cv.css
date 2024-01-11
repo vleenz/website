@@ -17,8 +17,8 @@ header {
 
 nav {
     width: 100%;
-    margin-left: 30%;
-    margin-right: 30%;
+    margin-left: 10%;
+    margin-right: 10%;
 }
 
 nav ul {
@@ -26,18 +26,18 @@ nav ul {
     padding: 0;
     overflow: hidden;
     display: flex;
-    justify-content: space-between;
+    justify-content: center;
 }
 
 ul li {
-
-    padding: 10px;
-    margin: 10px;
+    padding: 1.5%;
+    margin: 1.5%;
 }
 
-a {
+nav a {
     text-decoration: none;
-    font-size: 24px;
+    font-size: 1.75vw;
+
     color: #333;
 }
 
@@ -50,11 +50,36 @@ a {
     display: flex;
     justify-content: center;
     align-items: center;
-    /* Add this line to vertically center the image */
-    margin-top: 20px;
-    /* Adjust margin as needed */
+    /* margin-top: 10px; */
+
 }
 
 .img {
     object-fit: contain;
+}
+
+/* Footer */
+footer {
+    position: fixed;
+    bottom: 0;
+    height: 40px;
+    width: 100%;
+    left: 0;
+    list-style-type: none;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+footer li {
+    margin-inline: 1.5%;
+
+}
+
+footer li a {
+    text-decoration: none;
+    font-size: 1.5vw;
+
+    color: #333;
 }
