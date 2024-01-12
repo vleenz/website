@@ -1,7 +1,7 @@
 body {
     min-height: 100vh;
     margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Sarabun', sans-serif;
     font-size: 16px;
     color: #333;
     overflow: hidden;
@@ -99,53 +99,47 @@ footer li a {
 }
 
 .left-column {
-    text-align: center;
-
+    display: flex;
 }
-
 
 .left-column h1 {
     color: #333;
-    margin: 20px;
-    font-size: 64px;
-    font-weight: 700;
-    margin-bottom: 20px;
+    margin: 2vw;
+    font-size: 3vw;
     position: fixed;
-    bottom: 20px;
-    left: 20px;
+    font-weight: 400;
+    bottom: 2vw;
+    left: 2vw;
+
 
 }
 
 .left-column p {
-    margin: 20px;
-    font-size: 24px;
-    font-weight: 400;
-    margin-bottom: 20px;
+    margin: 2vw;
+    font-size: 1.5vw;
+
+    margin-bottom: 2vw;
+    font-weight: 800;
 }
 
-.img-container {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 20px;
+.bio {
+    position: relative;
+    max-width: 40%;
 
 }
 
-.img-container img {
-    width: 100%;
-    height: auto;
-    max-width: 500px;
-    max-height: 500px;
-    border-radius: 10px;
-    margin: 20px;
+/* Fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.0s;
 }
 
-/* Style for the right column */
-.right-column {
-    /* Set a maximum width for the column */
-    width: 30%;
-    /* flex: 70%; */
+@keyframes fade {
+    from {
+        opacity: .1
+    }
 
-    padding: 20px;
-    /* Add other styles as needed */
+    to {
+        opacity: 1
+    }
 }
