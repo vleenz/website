@@ -28,6 +28,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+        with:
+          lfs: true
       - name: Setup Pages
         uses: actions/configure-pages@v3
       - name: Build with Jekyll
@@ -37,6 +39,7 @@ jobs:
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
+        
 
   # Deployment job
   deploy:
@@ -49,3 +52,4 @@ jobs:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v2
+        
