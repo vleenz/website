@@ -1,0 +1,270 @@
+body {
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+    font-family: 'Kanit', sans-serif;
+}
+
+
+
+.border-container {
+    overflow: hidden;
+    border: 1px solid #adb2b1;
+    width: 100%;
+    height: 90vh;
+    margin: 2vh 2vw;
+    box-sizing: border-box;
+    color: #adb2b1;
+    background-size: contain;
+    position: relative;
+    display: grid;
+    grid-template-columns: 33% 1fr 30%;
+    grid-template-rows: 10% 5% 1fr;
+}
+
+.name {
+    display: flex;
+    position: relative;
+    font-weight: 100;
+    font-size: 4vw;
+    grid-area: 1 / 1 / 2 / 2;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    margin-bottom: 0;
+    align-items: center;
+}
+
+.subtitle {
+    position: relative;
+    font-weight: 800;
+    font-size: 1.2vw;
+    grid-area: 2 / 1 / 3 / 2;
+    margin-left: 2vw;
+    margin-top: 5px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.paragraph {
+    grid-area: 3 / 1 / 4 / 2;
+    display: flex;
+    max-width: 50%;
+    margin: 2vw;
+    position: relative;
+}
+
+.paragraph p {
+    justify-content: left;
+    font-weight: 800;
+    bottom: 0;
+    text-align: left;
+}
+
+.button-container {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.invertButton {
+    background-color: #adb2b1;
+    height: 2vh;
+    width: 2vh;
+    margin: 0;
+    padding: 0;
+    border: none;
+    cursor: pointer;
+}
+
+#invertText {
+    font-size: 1.2vw;
+}
+
+video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+
+.nav {
+    grid-area: 3 / 3 / 4 / 4;
+    display: flex;
+    flex-direction: column;
+    margin: 2vw;
+    position: relative;
+    text-decoration: none;
+    text-align: right;
+}
+
+.nav ul {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    margin: 0;
+    max-width: 100%;
+    list-style-type: none;
+}
+
+.nav li {
+    margin-bottom: 10px;
+}
+
+.nav a {
+    text-decoration: none;
+    color: #adb2b1;
+    font-weight: 800;
+    font-size: 1.5vw;
+    margin: 2%;
+}
+
+.nav span {
+    text-decoration: none;
+    color: #adb2b1;
+    font-weight: 800;
+    font-size: 1.5vw;
+    margin: 2%;
+}
+
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+
+
+    .border-container {
+        overflow: hidden;
+        border: 1px solid #adb2b1;
+        width: 100%;
+        height: 93vh;
+        margin: 7% 7%;
+        background-color: rgba(56, 56, 56, 0.8);
+        box-sizing: border-box;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: 20% 5% 1fr;
+
+    }
+
+    .name {
+        /* align-items: center; */
+        justify-content: center;
+        font-size: 15vw;
+        margin: 0;
+        margin-top: 2vh;
+        grid-area: 1 / 1 / 2 / 3;
+    }
+
+    .subtitle {
+        display: flex;
+        /* align-items: center; */
+        justify-content: center;
+        font-size: 4vw;
+        grid-area: 2 / 1 / 3 / 3;
+    }
+
+
+    .paragraph {
+        max-width: 100%;
+        font-size: 5vw;
+        grid-area: 3 / 1 / 4 / 3;
+    }
+
+    .paragraph p {
+        text-align: center;
+        margin: 2vh;
+    }
+
+
+    .nav {
+        grid-area: 3 / 2 / 4 / 3;
+        margin: 0;
+        /* justify-content: center; */
+        align-items: flex-end;
+        margin-top: auto;
+        margin-right: 4vh;
+        margin-bottom: 4vh;
+        bottom: 0;
+        right: 0;
+    }
+
+
+
+
+
+    .nav ul {
+        flex-direction: column;
+    }
+
+    .nav li {
+        margin-bottom: 0;
+        /* margin-right: 10px; */
+    }
+
+    .nav a,
+    .nav span {
+        font-size: 3vw;
+        margin: 0;
+    }
+
+    .invertButton {
+        grid-area: 4 / 1 / 5 / 2;
+        background-color: #adb2b1;
+        height: 2vh;
+        width: 2vh;
+        margin: 0;
+        padding: 0;
+        border: none;
+        cursor: pointer;
+    }
+
+    .button-container {
+
+        margin: 2vh;
+    }
+
+    .myVideo {
+        opacity: 0.1;
+    }
+
+    #invertText {
+        font-size: 2vh;
+    }
+}
+
+
+.dropdown {
+    position: relative;
+    display: inline-flex;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    display: none;
+    position: relative;
+    min-width: 160px;
+    z-index: 1;
+    text-align: right;
+    /* Added this line */
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    color: #adb2b1;
+    text-decoration: none;
+    display: flex;
+    justify-content: flex-end;
+    /* Added this line */
+}
+
+
+
+.show {
+    display: flex;
+    flex-direction: column;
+}

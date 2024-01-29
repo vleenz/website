@@ -1,59 +1,57 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Vincent Lee</title>
-    <link rel="stylesheet" href="./styles/index.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>My Webpage</title>
+    <link rel="stylesheet" href="index.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@400;800&display=swap" rel="stylesheet">
-    <link rel="icon" href="./favicon.ico" type="image/x-icon">
-
+    <link href="https://fonts.googleapis.com/css2?family=Kanit&display=swap" rel="stylesheet">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
 <body>
+    <video autoplay muted loop id="myVideo">
+        <source src="full.mp4" type="video/mp4">
+    </video>
 
 
-    <div class="border-container">
 
-        <header>
-            <nav>
-                <ul>
-                    <li class="index"><a href="./index.html">Home</a></li>
-                    <li class="portfolio"><a href="./portfolio.html">Portfolio</a></li>
-                    <li class="cv"><a href="./cv.html">CV</a></li>
+    <div class="border-container" id="border-container">
+        <div class="name"> Vincent Lee
+        </div>
+        <div class="subtitle">
+            Finance and Computer Science Graduate
+        </div>
+        <div class="paragraph">
+            <p> With a passion for building creative solutions and driving positive change, I'm committed to
+                continuous
+                growth. I look forward to joining a dynamic team where I can make a meaningful impact for the
+                future.
+            </p>
+            <div class="button-container">
+                <button class="invertButton" id="invertButton"></button>
+                <span id="invertText" style=" font-weight: 800; cursor: pointer;">Invert
+                </span>
+            </div>
+        </div>
 
-                </ul>
-            </nav>
-        </header>
-        <main>
-            <div class="fade">
-                <div class="left-column">
-                    <h1>Vincent Lee</h1>
-                    <div class="bio">
-                        <P>
-                            A recent finance and computer science
-                            graduate with a passion for
-                            building
-                            creative solutions and driving positive change for the future. I'm committed to continuous
-                            growth
-                            and look
-                            forward to joining a dynamic team where I can make a meaningful impact.
+        <div class="nav">
+            <ul>
+                <span id="downloadText" style=" font-weight: 800; cursor: pointer;" onclick="downloadCV()">Download
+                    CV</span>
 
-                        </P>
-                    </div>
+                <span id="contactText" style="font-weight: 800; cursor: pointer;" class="dropbtn"
+                    onclick="myFunction()">Contact</span>
+                <div id="myDropdown" class="dropdown-content">
+                    <a>vincentleenz01@gmail.com</a>
+                    <a>0273632070</a>
 
                 </div>
-        </main>
+            </ul>
+        </div>
+
+
     </div>
-
-
     <script src="index.js"></script>
-    </div>
 </body>
-
-</html>
