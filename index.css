@@ -193,7 +193,14 @@ video {
         right: 0;
     }
 
+    @media screen and (max-width: 767px) {
 
+        _::-webkit-full-page-media,
+        _:future,
+        :root .safari_only {
+            padding-bottom: 65px;
+        }
+    }
 
 
 
@@ -243,23 +250,21 @@ video {
     display: inline-flex;
 }
 
-/* Dropdown Content (Hidden by Default) */
 .dropdown-content {
     display: none;
     position: relative;
     min-width: 160px;
     z-index: 1;
     text-align: right;
-    /* Added this line */
+
 }
 
-/* Links inside the dropdown */
 .dropdown-content a {
     color: #adb2b1;
     text-decoration: none;
     display: flex;
     justify-content: flex-end;
-    /* Added this line */
+
 }
 
 
