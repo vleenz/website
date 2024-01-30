@@ -15,8 +15,6 @@
         <source src="full.mp4" type="video/mp4">
     </video>
 
-    <div class='safari_only'> </div>
-
     <div class="border-container" id="border-container">
         <div class="name"> Vincent Lee
         </div>
@@ -41,13 +39,27 @@
                 <span id="downloadText" style=" font-weight: 800; cursor: pointer;" onclick="downloadCV()">Download
                     CV</span>
 
-                <span id="contactText" style="font-weight: 800; cursor: pointer;" class="dropbtn"
+                <span id="contactText" style="font-weight: 800; cursor: pointer;  cursor: pointer;" class="dropbtn"
                     onclick="myFunction()">Contact</span>
                 <div id="myDropdown" class="dropdown-content">
-                    <a>vincentleenz01@gmail.com</a>
-                    <a>0273632070</a>
+                    <a id="email" onclick="copyText('email')">vincentleenz01@gmail.com
+                        <span>
+                            <img src="copy.png" alt="copy" style="width: 3vh; height: 3vh;  cursor: pointer;">
+                        </span>
+                    </a>
+
+                    <a id="phone" onclick="copyText('phone')">
+                        0273632070 <span>
+                            <img src="copy.png" alt="copy" style="width: 3vh; height: 3vh;  cursor: pointer;">
+                        </span>
+                    </a>
 
                 </div>
+
+
+                <style>
+
+                </style>
             </ul>
         </div>
 

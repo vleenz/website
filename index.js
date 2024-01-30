@@ -48,36 +48,6 @@ window.onclick = function (event) {
     }
 }
 
-// var video = document.getElementById("myVideo");
-// var lastMouseX = null;
-// var lastTimestamp = null;
-
-// // Track mouse movement
-// document.addEventListener("mousemove", function (event) {
-//     var currentMouseX = event.clientX;
-//     var currentTime = Date.now();
-
-//     if (lastMouseX !== null && lastTimestamp !== null) {
-//         var distance = Math.abs(currentMouseX - lastMouseX);
-//         var timeDiff = currentTime - lastTimestamp;
-//         var speed = distance / timeDiff;
-
-//         // Adjust video playback speed based on mouse speed
-//         if (speed > 10) {
-//             video.playbackRate = 10; // Increase playback speed
-//         } else if (speed > 5) {
-//             video.playbackRate = 6;
-//         } else if (speed > 2) {
-//             video.playbackRate = 3;
-//         } else {
-//             video.playbackRate = 1; // Normal playback speed
-//         }
-//     }
-
-//     lastMouseX = currentMouseX;
-//     lastTimestamp = currentTime;
-// });
-
 var video = document.getElementById("myVideo");
 var isMouseMoving = false;
 
@@ -95,3 +65,27 @@ document.addEventListener("mousemove", function (event) {
         video.playbackRate = 1;
     }, 100);
 });
+
+
+function copyText(elementId) {
+    var copyText = document.getElementById(elementId).innerText;
+
+    navigator.clipboard.writeText(copyText)
+        .then(() => {
+            const alertElement = document.createElement('div');
+            alertElement.classList.add('alert');
+            alertElement.textContent = 'Copied to clipboard';
+            document.body.appendChild(alertElement);
+            setTimeout(() => {
+                alertElement.remove();
+            }, 1500);
+        })
+        .catch((error) => {
+            console.error('Failed to copy text: ', error);
+        });
+
+}
+
+
+
+
