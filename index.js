@@ -4,13 +4,16 @@ let isInverted = false;
 function handleInvert() {
     const htmlElement = document.querySelector('html');
     const videoElement = document.getElementById('myVideo');
+    const invertTextElement = document.getElementById('invertText');
 
     if (isInverted) {
         htmlElement.style.filter = 'invert(0%)';
         videoElement.style.transform = 'scaleY(1)';
+        invertTextElement.textContent = 'Light Mode';
     } else {
         htmlElement.style.filter = 'invert(100%)';
         videoElement.style.transform = 'scaleY(-1)';
+        invertTextElement.textContent = 'Dark Mode';
     }
 
     isInverted = !isInverted;
@@ -21,9 +24,9 @@ document.getElementById('invertText').addEventListener('click', handleInvert);
 
 
 function downloadCV() {
-    const cvLink = 'CV_VL.pdf';
+    const cvLink = 'CV_WEBSITE.pdf';
     const link = document.createElement('a');
-    const fileName = 'CV_VL.pdf';
+    const fileName = 'CV_WEBSITE.pdf';
     link.download = fileName;
     link.href = cvLink;
     document.body.appendChild(link);

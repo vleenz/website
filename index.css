@@ -121,10 +121,12 @@ body {
     padding: 0;
     border: none;
     cursor: pointer;
+    font-weight: 400;
 }
 
 #invertText {
     font-size: 1.2vw;
+
 }
 
 video {
