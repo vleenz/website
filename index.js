@@ -18,7 +18,7 @@ function handleInvert() {
     }
 
     isInverted = !isInverted;
-    console.log('isInverted', isInverted, 'invertTextElement', invertTextElement.textContent);
+
 }
 
 document.getElementById('invertButton').addEventListener('click', handleInvert);
