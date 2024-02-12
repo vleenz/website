@@ -1,6 +1,7 @@
 
 let isInverted = false;
 
+
 function handleInvert() {
     const htmlElement = document.querySelector('html');
     const videoElement = document.getElementById('myVideo');
@@ -17,6 +18,7 @@ function handleInvert() {
     }
 
     isInverted = !isInverted;
+    console.log('isInverted', isInverted, 'invertTextElement', invertTextElement.textContent);
 }
 
 document.getElementById('invertButton').addEventListener('click', handleInvert);
