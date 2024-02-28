@@ -54,22 +54,38 @@ window.onclick = function (event) {
 }
 
 var video = document.getElementById("myVideo");
-var isMouseMoving = false;
+var prevEvent, currentEvent;
+document.documentElement.onmousemove = function (event) {
+    currentEvent = event;
+}
 
-document.addEventListener("mousemove", function (event) {
+var maxSpeed = 0, prevSpeed = 0, maxPositiveAcc = 0, maxNegativeAcc = 0;
+var maxPlaybackRate = 6;
 
-    if (!isMouseMoving) {
-        isMouseMoving = true;
-        video.playbackRate = 5;
+setInterval(function () {
+    if (prevEvent && currentEvent) {
+        var movementX = Math.abs(currentEvent.screenX - prevEvent.screenX);
+        var movementY = Math.abs(currentEvent.screenY - prevEvent.screenY);
+        var movement = Math.sqrt(movementX * movementX + movementY * movementY);
+
+
+        var speed = movement;
+        // console.log(speed)
+
+        if (speed > 0) {
+            calculatedPlaybackRate = 1 + (speed / 100)
+            video.playbackRate = Math.min(calculatedPlaybackRate, maxPlaybackRate);
+        } else if (speed < 0.1) {
+            video.playbackRate = 1;
+        }
+
+
+
     }
 
-
-    clearTimeout(timeout);
-    var timeout = setTimeout(function () {
-        isMouseMoving = false;
-        video.playbackRate = 1;
-    }, 100);
-});
+    prevEvent = currentEvent;
+    prevSpeed = speed;
+}, 100);
 
 
 function copyText(elementId) {
